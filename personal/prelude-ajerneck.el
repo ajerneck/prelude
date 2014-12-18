@@ -63,6 +63,23 @@
 (setq org-default-notes-file (concat org-directory "/inbox.org"))
 (define-key global-map "\C-cc" 'org-capture)
 
+
+;; One sentence per line.
+;; To adjust one sentence per line
+;; http://luca.dealfaro.org/Emacs-fill-sentence-macro
+
+(defun fill-sentence ()
+  (interactive)
+  (save-excursion
+    (or (eq (point) (point-max)) (forward-char))
+    (forward-sentence -1)
+                                        ;(indent-relative)
+    (let ((beg (point)))
+      (forward-sentence)
+      (fill-region-as-paragraph beg (point)))))
+(global-set-key "\ej" 'fill-sentence)
+
+
 (provide 'prelude-ajerneck)
 
 ;;; prelude-ajerneck.el ends here
