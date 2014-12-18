@@ -49,6 +49,14 @@
 (global-set-key "\M-g\M-m" 'magit-status)
 
 
+;; Org Mode customizations
+(setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "STARTED(s)" "CURRENT(u!)" "WAIT(w@)" "SOMEDAY(y)" "|" "DONE(d!)" "CANCELLED(c@)")))
+
+;; capture
+(setq org-directory "~/start/admin/org")
+(setq org-default-notes-file (concat org-directory "/inbox.org"))
+(define-key global-map "\C-cc" 'org-capture)
+
 (provide 'prelude-ajerneck)
 
 ;;; prelude-ajerneck.el ends here
