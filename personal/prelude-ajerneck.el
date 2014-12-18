@@ -39,6 +39,12 @@
 (custom-set-faces '(window-numbering-face (( t (:foreground "DeepPink" :underline "DeepPink" :weight bold)))))
 (window-numbering-mode 1)
 
+;; Duplicate thing
+;; duplicate line, region, etc.
+;; prefix argument comments out.
+(require 'duplicate-thing)
+(global-set-key (kbd "M-c") 'duplicate-thing)
+
 ;; Helm customizations
 ;; http://tuhdo.github.io/helm-intro.html
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
