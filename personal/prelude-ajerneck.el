@@ -208,6 +208,20 @@
   flycheck-command-map)
 
 
+;; turn off adding newline at the end, because it adds one for every
+;; yasnippet expansion.
+(setq require-final-newline nil)
+
+;; Switch flyspell-check languages
+;; http://www.emacswiki.org/emacs/FlySpell#toc5
+(defun fd-switch-dictionary()
+  (interactive)
+  (let* ((dic ispell-current-dictionary)
+         (change (if (string= dic "svenska") "english" "svenska")))
+    (ispell-change-dictionary change)
+    (message "Dictionary switched from %s to %s" dic change)
+    ))
+(global-set-key (kbd "<f8>")   'fd-switch-dictionary)
 
 (provide 'prelude-ajerneck)
 
