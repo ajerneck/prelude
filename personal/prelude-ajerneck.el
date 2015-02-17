@@ -107,9 +107,14 @@
 
         ("m" "Most important tasks" entry (file+datetree "~/start/admin/org/journal.org")
          "* %U Most important tasks:\n
-** TODO %?\n
-** TODO  \n
-* Day notes
+** TODO Hard: %?\n
+** Mosquito tasks\n
+*** TODO \n
+*** TODO \n
+** TODO PM: \n
+** TODO Habit: \n
+* Day notes\n
+* Goals for tomorrow\n
 ")
 
 ))
