@@ -112,7 +112,8 @@
 *** TODO \n
 *** TODO \n
 ** TODO PM: \n
-** TODO Habit: \n
+** TODO Habit 1: Khan \n
+** TODO Habit 2: Practice Wake \n
 * Day notes\n
 * Goals for tomorrow\n
 ")
